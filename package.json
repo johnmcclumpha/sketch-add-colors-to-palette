@@ -20,5 +20,9 @@
   },
   "devDependencies": {
     "@skpm/builder": "^0.5.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnmcclumpha/sketch-add-colors-to-palette.git"
+  },
 }
