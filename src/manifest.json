@@ -11,6 +11,7 @@
     {
       "name": "Add fill colors",
       "identifier": "add-colors-to-palette.add-fill-colors",
+      "shortcut": "command shift d",
       "script": "./add-fill-colors.js"
     }
   ],
