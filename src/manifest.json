@@ -3,27 +3,40 @@
   "description": "Plugin to quickly add fill colors of selected layers to a sketch document palette",
   "author": "John McClumpha",
   "homepage": "https://github.com/johnmcclumpha/sketch-add-colors-to-palette",
-  "version": "1.1",
+  "version": "1.2",
   "identifier": "au.com.mcclumpha.add-colors-to-palette",
   "compatibleVersion": 3,
   "bundleVersion": 1.0,
   "commands": [
     {
-      "name": "Add fill colors",
+      "name": "Add fills - Color Names",
       "identifier": "add-colors-to-palette.add-fill-colors",
       "shortcut": "command shift d",
       "script": "./add-fill-colors.js"
     },
     {
-      "name": "Add fill colors (using layer name)",
+      "name": "Add fills - Layer Names",
       "identifier": "add-colors-to-palette.add-fill-colors-named",
       "script": "./add-fill-colors-named.js"
+    },
+    {
+      "name": "Add borders - Color Names",
+      "identifier": "add-colors-to-palette.add-border-colors",
+      "script": "./add-border-colors.js"
+    },
+    {
+      "name": "Add borders - Layer Names",
+      "identifier": "add-colors-to-palette.add-border-colors-named",
+      "script": "./add-border-colors-named.js"
     }    
   ],
   "menu": {
     "title": "Add Colors to Palette",
     "items": [
-      "add-colors-to-palette.add-fill-colors"
+      "add-colors-to-palette.add-fill-colors",
+      "add-colors-to-palette.add-fill-colors-named",
+      "add-colors-to-palette.add-border-colors",
+      "add-colors-to-palette.add-border-colors-named"
     ]
   }
 }
