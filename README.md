@@ -8,8 +8,21 @@ Install the plugin - for now head over to (https://github.com/johnmcclumpha/sket
 
 Within sketch:
 
-select the layers with the fill colours you want to add and navigate to:
+Select the layers with the fill or border colours you want to add and navigate to:
 
-Plugins > Add Colors to Palette > Add fill colors
+`Plugins > Add Colors to Palette`
 
-Alternatively the shortcut key of `cmd-shift-d` has now been implemented
+You can then select from one of four commands:
+
+`Add fills - Color Names`
+This will add the fill colors from the selected layers and name them using color values
+This command can also be accessed using the shortcut of `cmd-shift-d`
+
+`Add fills - Layer Names`
+This will add the fill colors from the selected layers and name them using layer names
+
+`Add borders - Color Names`
+This will add the border colors from the selected layers and name them using color values
+
+`Add borders - Layer Names`
+This will add the border colors from the selected layers and name them using layer names
