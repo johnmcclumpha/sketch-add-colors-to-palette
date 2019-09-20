@@ -1,5 +1,5 @@
 export function setSwatches(sketch, attribute = 'fill', name = 'color') {
-  // attribute is 'fill' or 'stroke'
+  // attribute is 'fill' or 'border'
   // name is 'color' or 'layer'
 
   const document = sketch.getSelectedDocument()
@@ -19,7 +19,7 @@ export function setSwatches(sketch, attribute = 'fill', name = 'color') {
             swatchcolors.push({'color':fill.color, 'name':layer.name})
           }
         })
-      } else if(attribute === 'stroke') {
+      } else if(attribute === 'border') {
         layer.style.borders.forEach(function (border, j) {
           if(border.fillType === 'Color'){
             swatchcolors.push({'color':border.color, 'name':layer.name})
@@ -29,19 +29,32 @@ export function setSwatches(sketch, attribute = 'fill', name = 'color') {
     })
 
     if(swatchcolors.length > 0) {
+      var totalAdded = 0
+      var totalSkipped =0
       swatchcolors.forEach(function(fillcolor, i) {
         var swatchName = name === 'layer' ? fillcolor.name : fillcolor.color
         var mscolor = MSImmutableColor.colorWithSVGString(fillcolor.color).newMutableCounterpart()
         var newcolor = MSColorAsset.alloc().initWithAsset_name(mscolor, swatchName)
-        // @todo check if the current swatchName exists, if so - don't add it (or update it)?
-        colorAssets.push(newcolor)
+        var foundSwatch = false
+        document.colors.forEach(function(docSwatch) {
+          if(docSwatch.type === 'ColorAsset' && docSwatch.name === swatchName) {
+            foundSwatch = true
+          }
+        })
+        if(foundSwatch === false) {
+          totalAdded++
+          colorAssets.push(newcolor)          
+        } else {
+          totalSkipped++
+        }
       })
       var doc = context.document
       var assets = doc.documentData().assets()
+
       assets.addColorAssets(colorAssets)
-      sketch.UI.message(`${swatchcolors.length} colors added 😀`)
+      sketch.UI.message(`${totalAdded} colors added, ${totalSkipped} skipped`)
     } else {
-      sketch.UI.message('No fill colors found')
+      sketch.UI.message(`No ${attribute} colors found`)
     }
   }
   

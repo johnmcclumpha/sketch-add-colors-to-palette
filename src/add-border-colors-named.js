@@ -3,6 +3,6 @@ import { setSwatches } from './color-utils.js'
 
 export default function(context) {
 
-  setSwatches(sketch, 'stroke', 'layer')
+  setSwatches(sketch, 'border', 'layer')
 
 }
