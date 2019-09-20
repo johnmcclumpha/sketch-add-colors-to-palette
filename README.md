@@ -4,7 +4,7 @@ This plugin allows you to quickly and easily add colors from the fills of select
 
 ## Installation
 
-- [Download](../../releases/latest/download/v1.3.0/sketch-add-colors-to-palette.sketchplugin.zip) the latest release of the plugin
+- [Download](../../releases/latest/download/add-colors-to-palette.sketchplugin.zip) the latest release of the plugin
 - Un-zip
 - Double-click on sketch-retain-text-color.sketchplugin
 
