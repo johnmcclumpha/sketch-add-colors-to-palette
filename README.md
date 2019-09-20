@@ -31,3 +31,6 @@ This will add the border colors from the selected layers and name them using col
 
 `Add borders - Layer Names`
 This will add the border colors from the selected layers and name them using layer names
+
+
+**Note:** Any existing swatches with the same *names* will not be added
