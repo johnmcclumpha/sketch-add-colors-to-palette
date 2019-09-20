@@ -3,7 +3,7 @@
   "description": "Plugin to quickly add fill colors of selected layers to a sketch document palette",
   "author": "John McClumpha",
   "homepage": "https://github.com/johnmcclumpha/sketch-add-colors-to-palette",
-  "version": "1.2",
+  "version": "1.3.0",
   "identifier": "au.com.mcclumpha.add-colors-to-palette",
   "compatibleVersion": 3,
   "bundleVersion": 1.0,
