@@ -2,9 +2,14 @@
 
 This plugin allows you to quickly and easily add colors from the fills of selected layers in a Sketch file to the document palette.
 
-## Usage
+## Installation
 
-Install the plugin - for now head over to (https://github.com/johnmcclumpha/sketch-add-colors-to-palette/releases) to grab it and install
+- [Download](../../releases/latest/download/sketch-add-colors-to-palette.sketchplugin.zip) the latest release of the plugin
+- Un-zip
+- Double-click on sketch-retain-text-color.sketchplugin
+
+
+## Usage
 
 Within sketch:
 
