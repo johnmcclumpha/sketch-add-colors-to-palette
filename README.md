@@ -1,4 +1,4 @@
-# add-colors-to-palette
+# Sketch Plugin: Add Colors To Palette
 
 This plugin allows you to quickly and easily add colors from the fills of selected layers in a Sketch file to the document palette.
 
